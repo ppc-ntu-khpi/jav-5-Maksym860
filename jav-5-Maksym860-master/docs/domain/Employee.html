@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Employee (domain)</title>
+<style>
+body { font-family: 'DejaVu Sans', Arial, sans-serif; margin: 0; background: #fff; color: #353833; }
+.header { background: #4D7A97; color: white; padding: 10px 20px; }
+.header h1 { margin: 0; font-size: 1.4em; }
+.nav { background: #dee3e9; padding: 6px 20px; font-size: 0.85em; }
+.nav a { color: #4D7A97; text-decoration: none; margin-right: 10px; }
+.content { padding: 20px 40px; max-width: 900px; }
+h2.classname { background: #4D7A97; color: white; padding: 5px 10px; font-size: 1.1em; border-radius: 3px; }
+h3 { color: #4D7A97; border-bottom: 1px solid #dee3e9; padding-bottom: 4px; }
+table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+th { background: #dee3e9; text-align: left; padding: 6px 10px; }
+td { padding: 6px 10px; vertical-align: top; border-bottom: 1px solid #f0f0f0; }
+td.code { font-family: monospace; white-space: nowrap; }
+.hierarchy { font-family: monospace; background: #f8f8f8; border: 1px solid #ddd; padding: 10px; margin-bottom: 16px; border-radius: 3px; }
+a { color: #4D7A97; }
+.tag { color: #666; font-style: italic; }
+</style>
+</head>
+<body>
+<div class="header"><h1>API Працівників Компанії</h1></div>
+<div class="nav">
+  <a href="../overview-summary.html">Огляд</a>
+  <a href="package-summary.html">Пакет</a>
+  <span>Клас</span>
+</div>
+<div class="content">
+
+<h2 class="classname">Клас Employee</h2>
+<div class="hierarchy">java.lang.Object<br>&nbsp;&nbsp;&nbsp;└─ <b>domain.Employee</b></div>
+<p><b>public class <strong>Employee</strong> extends java.lang.Object</b></p>
+<p>Представляє загального працівника компанії. Це базовий клас для всіх типів працівників.
+Кожен працівник має унікальний випадково згенерований ідентифікатор, ім'я, посаду, рівень кваліфікації (1–3) та відділ.</p>
+<p class="tag">@author Maksym &nbsp;&nbsp; @version 1.0</p>
+
+<h3>Конструктори</h3>
+<table>
+<tr><th>Конструктор</th><th>Опис</th></tr>
+<tr><td class="code">Employee()</td><td>Створює працівника з випадковим ідентифікатором. Інші поля залишаються незаповненими.</td></tr>
+<tr><td class="code">Employee(String&nbsp;name, String&nbsp;jobTitle, int&nbsp;level, String&nbsp;dept)</td><td>Створює працівника із зазначеними даними.</td></tr>
+</table>
+
+<h3>Методи</h3>
+<table>
+<tr><th>Тип</th><th>Метод</th><th>Опис</th></tr>
+<tr><td class="code">String</td><td class="code">getDept()</td><td>Повертає назву відділу працівника.</td></tr>
+<tr><td class="code">String</td><td class="code">getJobTitle()</td><td>Повертає посаду працівника.</td></tr>
+<tr><td class="code">int</td><td class="code">getLevel()</td><td>Повертає рівень кваліфікації (1–3).</td></tr>
+<tr><td class="code">String</td><td class="code">getName()</td><td>Повертає повне ім'я працівника.</td></tr>
+<tr><td class="code">void</td><td class="code">setDept(String&nbsp;dept)</td><td>Встановлює відділ працівника.</td></tr>
+<tr><td class="code">void</td><td class="code">setJobTitle(String&nbsp;job)</td><td>Встановлює посаду працівника.</td></tr>
+<tr><td class="code">void</td><td class="code">setLevel(int&nbsp;level)</td><td>Встановлює рівень кваліфікації (1–3); недопустимі значення замінюються на 1.</td></tr>
+<tr><td class="code">void</td><td class="code">setName(String&nbsp;name)</td><td>Встановлює ім'я; якщо формат невірний — використовується <code>"John Doe"</code>.</td></tr>
+<tr><td class="code">String</td><td class="code">toString()</td><td>Повертає відформатований рядок з даними працівника.</td></tr>
+</table>
+
+<h3>Деталі конструкторів</h3>
+<p><b>Employee()</b><br>Створює працівника з випадково згенерованим ідентифікатором (0–999). Інші поля залишаються незаповненими.</p>
+<p><b>Employee(String name, String jobTitle, int level, String dept)</b><br>
+<span class="tag">@param name</span> повне ім'я (якщо формат невірний — встановлюється "John Doe")<br>
+<span class="tag">@param jobTitle</span> посада працівника<br>
+<span class="tag">@param level</span> рівень кваліфікації 1–3; інші значення → 1<br>
+<span class="tag">@param dept</span> назва відділу</p>
+
+<h3>Деталі методів</h3>
+<p><b>setName(String name)</b><br>
+Встановлює ім'я працівника. Ім'я повинно містити ім'я та прізвище через пробіл, лише літери, апострофи, коми, крапки або дефіси. Якщо валідація не пройшла — встановлюється <code>"John Doe"</code>.<br>
+<span class="tag">@param name</span> повне ім'я працівника</p>
+<p><b>setLevel(int level)</b><br>
+Встановлює рівень кваліфікації. Приймає 1, 2 або 3; будь-яке інше значення тихо замінюється на 1.<br>
+<span class="tag">@param level</span> рівень кваліфікації</p>
+<p><b>toString()</b><br>
+<span class="tag">@return</span> відформатований рядок з ідентифікатором, ім'ям, посадою, рівнем та відділом</p>
+
+</div>
+</body>
+</html>

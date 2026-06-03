@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Artist (domain)</title>
+<style>
+body { font-family: 'DejaVu Sans', Arial, sans-serif; margin: 0; background: #fff; color: #353833; }
+.header { background: #4D7A97; color: white; padding: 10px 20px; }
+.header h1 { margin: 0; font-size: 1.4em; }
+.nav { background: #dee3e9; padding: 6px 20px; font-size: 0.85em; }
+.nav a { color: #4D7A97; text-decoration: none; margin-right: 10px; }
+.content { padding: 20px 40px; max-width: 900px; }
+h2.classname { background: #4D7A97; color: white; padding: 5px 10px; font-size: 1.1em; border-radius: 3px; }
+h3 { color: #4D7A97; border-bottom: 1px solid #dee3e9; padding-bottom: 4px; }
+table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+th { background: #dee3e9; text-align: left; padding: 6px 10px; }
+td { padding: 6px 10px; vertical-align: top; border-bottom: 1px solid #f0f0f0; }
+td.code { font-family: monospace; white-space: nowrap; }
+.hierarchy { font-family: monospace; background: #f8f8f8; border: 1px solid #ddd; padding: 10px; margin-bottom: 16px; border-radius: 3px; }
+a { color: #4D7A97; }
+.tag { color: #666; font-style: italic; }
+</style>
+</head>
+<body>
+<div class="header"><h1>API Працівників Компанії</h1></div>
+<div class="nav">
+  <a href="../overview-summary.html">Огляд</a>
+  <a href="package-summary.html">Пакет</a>
+  <span>Клас</span>
+</div>
+<div class="content">
+
+<h2 class="classname">Клас Artist</h2>
+<div class="hierarchy">java.lang.Object<br>&nbsp;&nbsp;&nbsp;└─ domain.Employee<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ <b>domain.Artist</b></div>
+<p><b>public class <strong>Artist</strong> extends <a href="Employee.html">Employee</a></b></p>
+<p>Представляє працівника-художника, який має набір творчих навичок.
+<code>Artist</code> розширює <a href="Employee.html">Employee</a> і додає список навичок, що описують художні здібності працівника.</p>
+<p class="tag">@author Maksym &nbsp;&nbsp; @version 1.0 &nbsp;&nbsp; @see Employee</p>
+
+<h3>Конструктори</h3>
+<table>
+<tr><th>Конструктор</th><th>Опис</th></tr>
+<tr><td class="code">Artist()</td><td>Створює художника з випадковим ідентифікатором та порожнім масивом навичок (місткість 10).</td></tr>
+<tr><td class="code">Artist(String[]&nbsp;skiils)</td><td>Створює художника із зазначеними навичками та випадковим ідентифікатором.</td></tr>
+<tr><td class="code">Artist(String[]&nbsp;skiils, String&nbsp;name, String&nbsp;jobTitle, int&nbsp;level, String&nbsp;dept)</td><td>Створює художника з усіма зазначеними даними.</td></tr>
+</table>
+
+<h3>Методи</h3>
+<table>
+<tr><th>Тип</th><th>Метод</th><th>Опис</th></tr>
+<tr><td class="code">String</td><td class="code">getSkills()</td><td>Повертає навички у вигляді рядка, розділеного комами.</td></tr>
+<tr><td class="code">String[]</td><td class="code">getSkillsLSist()</td><td>Повертає масив навичок у вихідному вигляді.</td></tr>
+<tr><td class="code">void</td><td class="code">setSkills(String[]&nbsp;skills)</td><td>Встановлює масив навичок для цього художника.</td></tr>
+<tr><td class="code">String</td><td class="code">toString()</td><td>Повертає дані працівника з доданим переліком навичок.</td></tr>
+</table>
+
+<h3>Деталі методів</h3>
+<p><b>getSkills()</b><br><span class="tag">@return</span> навички у вигляді рядка, розділеного комами</p>
+<p><b>setSkills(String[] skills)</b><br><span class="tag">@param skills</span> новий масив назв навичок</p>
+<p><b>getSkillsLSist()</b><br><span class="tag">@return</span> масив навичок</p>
+<p><b>toString()</b><br><span class="tag">@return</span> відформатований рядок з даними працівника та навичками</p>
+
+</div>
+</body>
+</html>
