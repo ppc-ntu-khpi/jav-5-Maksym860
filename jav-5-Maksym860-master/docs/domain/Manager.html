@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Manager (domain)</title>
+<style>
+body { font-family: 'DejaVu Sans', Arial, sans-serif; margin: 0; background: #fff; color: #353833; }
+.header { background: #4D7A97; color: white; padding: 10px 20px; }
+.header h1 { margin: 0; font-size: 1.4em; }
+.nav { background: #dee3e9; padding: 6px 20px; font-size: 0.85em; }
+.nav a { color: #4D7A97; text-decoration: none; margin-right: 10px; }
+.content { padding: 20px 40px; max-width: 900px; }
+h2.classname { background: #4D7A97; color: white; padding: 5px 10px; font-size: 1.1em; border-radius: 3px; }
+h3 { color: #4D7A97; border-bottom: 1px solid #dee3e9; padding-bottom: 4px; }
+table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+th { background: #dee3e9; text-align: left; padding: 6px 10px; }
+td { padding: 6px 10px; vertical-align: top; border-bottom: 1px solid #f0f0f0; }
+td.code { font-family: monospace; white-space: nowrap; }
+.hierarchy { font-family: monospace; background: #f8f8f8; border: 1px solid #ddd; padding: 10px; margin-bottom: 16px; border-radius: 3px; }
+a { color: #4D7A97; }
+.tag { color: #666; font-style: italic; }
+</style>
+</head>
+<body>
+<div class="header"><h1>API Працівників Компанії</h1></div>
+<div class="nav">
+  <a href="../overview-summary.html">Огляд</a>
+  <a href="package-summary.html">Пакет</a>
+  <span>Клас</span>
+</div>
+<div class="content">
+
+<h2 class="classname">Клас Manager</h2>
+<div class="hierarchy">java.lang.Object<br>&nbsp;&nbsp;&nbsp;└─ domain.Employee<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ <b>domain.Manager</b></div>
+<p><b>public class <strong>Manager</strong> extends <a href="Employee.html">Employee</a></b></p>
+<p>Представляє менеджера, який керує командою об'єктів <a href="Employee.html">Employee</a>.
+<code>Manager</code> розширює <a href="Employee.html">Employee</a> і зберігає масив підпорядкованих працівників.</p>
+<p class="tag">@author Maksym &nbsp;&nbsp; @version 1.0 &nbsp;&nbsp; @see Employee</p>
+
+<h3>Конструктори</h3>
+<table>
+<tr><th>Конструктор</th><th>Опис</th></tr>
+<tr><td class="code">Manager()</td><td>Створює менеджера з випадковим ідентифікатором та порожньою командою (місткість 10).</td></tr>
+<tr><td class="code">Manager(Employee[]&nbsp;employees)</td><td>Створює менеджера з командою; інші поля незаповнені.</td></tr>
+<tr><td class="code">Manager(Employee[]&nbsp;employees, String&nbsp;name, String&nbsp;jobTitle, int&nbsp;level, String&nbsp;dept)</td><td>Повний конструктор з усіма даними та командою.</td></tr>
+</table>
+
+<h3>Методи</h3>
+<table>
+<tr><th>Тип</th><th>Метод</th><th>Опис</th></tr>
+<tr><td class="code">String</td><td class="code">getEmployees()</td><td>Повертає імена підпорядкованих працівників, розділені комами.</td></tr>
+<tr><td class="code">Employee[]</td><td class="code">getEmployeesList()</td><td>Повертає масив підпорядкованих працівників у вихідному вигляді.</td></tr>
+<tr><td class="code">void</td><td class="code">setEmployees(Employee[]&nbsp;employees)</td><td>Встановлює команду працівників цього менеджера.</td></tr>
+<tr><td class="code">String</td><td class="code">toString()</td><td>Повертає дані менеджера з доданим переліком команди.</td></tr>
+</table>
+
+<h3>Деталі методів</h3>
+<p><b>getEmployees()</b><br><span class="tag">@return</span> імена підпорядкованих працівників у вигляді рядка, розділеного комами</p>
+<p><b>setEmployees(Employee[] employees)</b><br><span class="tag">@param employees</span> новий масив об'єктів Employee</p>
+<p><b>toString()</b><br><span class="tag">@return</span> відформатований рядок з даними менеджера та командою</p>
+
+</div>
+</body>
+</html>
